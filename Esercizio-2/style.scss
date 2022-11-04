@@ -1,0 +1,47 @@
+$colore-1: red;
+$colore-2: blue;
+$colore-3: green;
+
+
+@mixin theme ($color, $bordercolor, $fontsize: 1rem) {
+    color: $color;
+    border: 1px solid $bordercolor;
+    font-size: $fontsize;
+    padding: 10px;
+    text-align: center;
+
+    p {
+        color: $color;
+        font-size: $fontsize;
+    }
+}
+
+.box {
+    border: 1px solid $colore-1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: $colore-3;
+    text-decoration: underline $colore-2;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.atr-blue {
+    @include theme($colore-2, $colore-3, 15px)
+}
+.atr-red {
+    @include theme($colore-1, $colore-3, 15px)
+}
+
+.atr-5{
+    @include theme($colore-3,$colore-2 ,25px )
+}
+
