@@ -1,0 +1,57 @@
+@import "color.scss";
+@import "functionrem.scss";
+
+%text {
+    color: $colore-3;
+    text-decoration: underline $colore-2;
+    }
+
+
+@mixin theme ($color, $bordercolor, $fontsize:converter(16)) {
+    color: $color;
+    border: converter(1) solid $bordercolor;
+    font-size: $fontsize;
+    padding: converter(10);
+    text-align: center;
+
+    p {
+        color: $color;
+        font-size: $fontsize;
+    }
+}
+
+.box {
+    border: converter(1) solid $colore-1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    @extend %text
+}
+h2{
+    @extend %text;
+    padding: converter(16);
+    border: converter(2) solid $colore-1;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: converter(10);
+}
+article{
+    &.atr-blue {
+        @include theme($colore-2, $colore-3,converter(15))
+    }
+&.atr-red {
+    @include theme($colore-1, $colore-3, converter(15))
+}
+
+&.atr-5{
+    @include theme($colore-3,$colore-2 ,converter(25))
+}
+
+}

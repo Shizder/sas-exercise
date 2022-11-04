@@ -1,1 +1,58 @@
-/*# sourceMappingURL=style.css.map */
+h2, h1 {
+  color: green;
+  -webkit-text-decoration: underline blue;
+          text-decoration: underline blue;
+}
+
+.box {
+  border: 0.0625rem solid red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  padding: 1rem;
+  border: 0.125rem solid red;
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.625rem;
+}
+
+article.atr-blue {
+  color: blue;
+  border: 0.0625rem solid green;
+  font-size: 0.9375rem;
+  padding: 0.625rem;
+  text-align: center;
+}
+article.atr-blue p {
+  color: blue;
+  font-size: 0.9375rem;
+}
+article.atr-red {
+  color: red;
+  border: 0.0625rem solid green;
+  font-size: 0.9375rem;
+  padding: 0.625rem;
+  text-align: center;
+}
+article.atr-red p {
+  color: red;
+  font-size: 0.9375rem;
+}
+article.atr-5 {
+  color: green;
+  border: 0.0625rem solid blue;
+  font-size: 1.5625rem;
+  padding: 0.625rem;
+  text-align: center;
+}
+article.atr-5 p {
+  color: green;
+  font-size: 1.5625rem;
+}/*# sourceMappingURL=style.css.map */
