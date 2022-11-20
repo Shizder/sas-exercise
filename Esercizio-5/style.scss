@@ -1,0 +1,116 @@
+@import "functionrem.scss";
+@import "variabili.scss";
+
+%regoleh1 {
+    color: $colore-3;
+    text-decoration: underline $colore-3;
+}
+
+%regoleh2 {
+    color: $colore-3;
+    border: converter(3) solid $colore-1;
+    padding: 1rem;
+}
+
+div {
+
+    border: converter(3) solid $colore-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: converter(5);
+
+    h1 {
+        @extend %regoleh1;
+    }
+
+    h2 {
+        @extend %regoleh2;
+    }
+
+    .contenitore1 {
+
+        display: flex;
+        justify-content: space-evenly;
+        padding: converter(10);
+    }
+
+    article {
+
+        border: converter(2) solid $colore-3;
+        padding: converter(10);
+        text-align: center;
+    }
+
+    .p1 {
+
+        color: $colore-2 ;
+        font-size: converter(15);
+
+    }
+
+    .p2 {
+
+        color: $colore-1 ;
+        font-size:converter(15);
+
+    }
+}
+
+
+$fontsizes: 1rem, 2rem, 3rem;
+
+@each $fontsize in $fontsizes {
+    .fs-#{$fontsize} {
+        font-size: $fontsize;
+
+    }
+}
+
+
+.sezione-frames {
+    display: flex;
+
+    justify-content: space-between;
+
+    div {
+        height: converter(45);
+        width: converter(45);
+        margin: 0 converter(6.3) 0 converter(6.3);
+
+        @for $i from 0 through 19 {
+            &:nth-child(#{$i}) {
+                background-color: white;
+                background-color: darken($coloresfondo, $i * 5%);
+                color: black;
+                color: lighten($colorefont , $i * 5%);
+
+
+            }
+        }
+
+    }
+
+}
+
+
+.contenitore2 {
+
+    padding: converter(10);
+    box-sizing: border-box;
+    width: 100%;
+
+    article {
+
+        border: converter(2) solid blue;
+        padding: converter(10);
+        text-align: center;
+
+        p {
+
+            color: $colore-3 ;
+            font-size: converter(25);
+
+        }
+    }
+}
